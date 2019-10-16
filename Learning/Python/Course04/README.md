@@ -267,8 +267,10 @@ for i in range(1, len(num_list)):
 
 for i in num_list:
     print(i, end= ' ')  # 1, 2, 3, 4, 5
-    
-# 또는
+```
+
+또는
+```python
 num_list = [1,5,4,3,2]
 
 for i in range(len(num_list)):
