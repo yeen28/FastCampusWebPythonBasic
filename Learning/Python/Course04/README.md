@@ -220,7 +220,7 @@ num_list = [1, 5, 4, 3, 2]
 
 ### 1. 
 ```python
-key = 5 # 첫 번째 인덱스를 가준으로 시작합니다.
+key = 5 # 첫 번째 인덱스를 기준으로 시작합니다.
 키를 통해 앞의 요소와 비교해 나갑니다.
 
 가장 먼저, 1과 5를 비교합니다. 1 < 5이므로, 정렬이 필요하지 않습니다.
@@ -267,6 +267,20 @@ for i in range(1, len(num_list)):
 
 for i in num_list:
     print(i, end= ' ')  # 1, 2, 3, 4, 5
+    
+# 또는
+num_list = [1,5,4,3,2]
+
+for i in range(len(num_list)):
+    j = i-1
+    key = num_list[i]
+    while num_list[j] > key and j >= 0:
+        num_list[j+1] = num_list[j]
+        num_list[j] = key
+        j -= 1
+
+for i in num_list:
+    print(i, end='') # 1, 2, 3, 4, 5
 ```
 
 우리가 코드를 작성하는 데 익숙해져서, 바로 코드를 작성할 수 있다면 좋겠지만, 머리 속에 내용을 바로 코드로 표현하는 것은 많이 어려운 작업입니다. 그렇기 때문에, 코드를 작성하기 전에, 그림을 그리거나 코드의 흐름을 하나하나 글로 작성해보는 것이 도움이 될 수 있습니다. 
