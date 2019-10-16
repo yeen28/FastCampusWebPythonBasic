@@ -24,15 +24,17 @@ num_list = [1, "2", 3.0, -4, [1, 2, 3]]
 # 1번 코드
 num_list = [1, 2, 3, 4, 5]
 double_list = [num_list, num_list]
+print(num_list) # [1, 2, 3, 4, 5]
+print(double_list) # [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]
 
 # 2번 코드
 for num in num_list:
-    print(num, end = ' ') # 1, 2, 3, 4, 5
+    print(num, end = ' ') # 1 2 3 4 5
 
 # 3번 코드
 for i in double_list:
     for j in i:
-        print(j, end = ' ') # 1, 2, 3, 4, 5, 1, 2, 3, 4, 5
+        print(j, end = ' ') # 1 2 3 4 5 1 2 3 4 5
 
 # 4번 코드
 num_list[len(num_list) - 1] = 6
@@ -40,13 +42,13 @@ print(num_list) # [1, 2, 3, 4, 6]
 
 # 5번 코드
 num_list = num_list + num_list 
-print(num_list) # [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+print(num_list) # [1, 2, 3, 4, 6, 1, 2, 3, 4, 6]
 num_list = num_list * 2 
-print(num_list) # [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+print(num_list) # [1, 2, 3, 4, 6, 1, 2, 3, 4, 6, 1, 2, 3, 4, 6, 1, 2, 3, 4, 6]
 
 # 6번 코드
 double_list[1] = []
-print(double_list) #[1, 2, 3, 4, 5, []]
+print(double_list) # [[1, 2, 3, 4, 6], []]
 ```
 우선, 위 코드를 보며 리스트 기초 사용법에 관한 대해서 알아보도록 하겠습니다.
 
