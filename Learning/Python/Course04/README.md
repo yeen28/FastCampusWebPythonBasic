@@ -111,7 +111,7 @@ rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 del rainbow[-1] # 마지막 인덱스 요소 삭제
 print(rainbow) # ['red', 'orange', 'yellow', 'green', 'blue', 'indigo']
 rainbow.append('violet') # 추가
-print(rainbow) # ['red', 'orange', 'yellow', 'green', 'blue', 'indigo']
+print(rainbow) # ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 print(rainbow.pop(len(rainbow) - 1)) # violet
 print(rainbow.index('red')) # 0
 print(rainbow.count('red')) # 1
