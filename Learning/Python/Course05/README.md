@@ -47,15 +47,15 @@ set.discard(x)|요소가 존재한다면 삭제
 ```python
 a = {1, 2, 3}
 b = {1, 2, 4}
-print(a & b) # 1, 2 교집합
-print(a | b) # 1, 2, 3, 4 합집합
-print(a - b) # 3 차집합
-print(a ^ b) # 3, 4 대칭차집합
+print(a & b) # {1, 2} 교집합
+print(a | b) # {1, 2, 3, 4} 합집합
+print(a - b) # {3} 차집합
+print(a ^ b) # {3, 4} 대칭차집합
 ```
 또한, 지난 장에서 알아봤듯이, 셋 컬렉션 역시 `Set Comprehension`을 지원합니다.
 ```python
 a = {x for x in 'abcdef' if x not in 'abc'}
-print(a) # {'d', 'e', 'f'}
+print(a) # {'d', 'e', 'f'}  -> 결과순서는 실행할 때마다 달라짐
 ```
 파이썬 코드를 작성하다 보면, 여러 요소의 값을 중복 없이 저장해야 할 경우가 있습니다. 이러한 경우에 셋 컬렉션을 이용하면, 상대적으로 간단하게 중복을 제거할 수 있습니다.
 
@@ -66,13 +66,22 @@ print(a) # {'d', 'e', 'f'}
 ```python
 # 1번 코드
 rainbow = 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet',
+print(rainbow) # ('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet')
+
 # 2번 코드
 rainbow[0] = 'black' # TypeError 에러 발생!
+
 # 3번 코드
 tup = (rainbow, [1, 2, 3, 4, 5])
 print(tup) # (('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'), [1, 2, 3, 4, 5])
 numbers = tup[1]
+print(numbers) # [1, 2, 3, 4, 5]
 numbers[0] = 0 # 에러 없음
+print(numbers) # [0, 2, 3, 4, 5]
+
+numbers2 = rainbow[2]
+print(numbers2) # yellow
+
 # 4번 코드
 int1 = (1)
 print(int1) # 1
