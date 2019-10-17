@@ -107,10 +107,11 @@ print(tuple1) # (1,)
 아래 코드는 튜플의 패킹과 언패킹의 예시입니다.
 ```python
 rainbow = 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet' # Packing
-tup = (rainbow, [1, 2, 3, 4, 5]) # Packing
-r, l = tup # Unpacking
+nature = 'tree', 'water', 'stone' # Packing
+tup = (rainbow, [1, 2, 3, 4, 5], nature) # Packing
+r, l, n = tup # Unpacking
 
-print(r[0], l[0]) # red 1
+print(r[0], l[0], n) # red 1 ('tree', 'water', 'stone')
 ```
 단, 언패킹을 하기 위해선 등호의 왼쪽에 오는 할당할 변수의 수가 튜플 안의 요소의 수와 일치해야 합니다. 그렇지 않으면, `ValueError`라는 에러가 발생합니다.
 
@@ -120,6 +121,8 @@ print(r[0], l[0]) # red 1
 ```python
 numbers = [1, 1, 2, 2, 3]
 # 1번 코드
+no_dup_numbers = list(numbers)
+print(no_dup_numbers) # [1, 1, 2, 2, 3]
 no_dup_numbers = list(set(numbers))  
 print(no_dup_numbers) # [1, 2, 3]
 
