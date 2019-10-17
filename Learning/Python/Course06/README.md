@@ -79,7 +79,8 @@ print(sum.format("귀요미")) # '1 + 1 = 귀요미'
 
 ```python
 a = "Life is too short"
-print(a.split('')) # [Life, is, too, short] 
+print(a.split(' ')) # [Life, is, too, short]
+# print(a.split()) # [Life, is, too, short]
 b = "Py,th,on" 
 print(b.split(',')) # [Py, th, on]
 ```
